@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/scanner", "destination": "/scanner.html" },
+    { "source": "/dashboard", "destination": "/scanner.html" },
+    { "source": "/relatorios", "destination": "/scanner.html" },
+    { "source": "/login", "destination": "/scanner.html" },
+    { "source": "/privacidade", "destination": "/" }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [
+      { "key": "X-Content-Type-Options", "value": "nosniff" },
+      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+      { "key": "X-Frame-Options", "value": "DENY" }
+    ]}
+  ]
+}
